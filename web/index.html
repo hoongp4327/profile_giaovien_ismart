@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Đội ngũ giảng viên | iSMART Education</title>
+  <meta name="description" content="Gặp gỡ đội ngũ giảng viên Việt Nam và nước ngoài của iSMART Education.">
+  <meta property="og:title" content="Đội ngũ giảng viên iSMART">
+  <meta property="og:description" content="Đồng hành cùng học sinh trên hành trình khám phá tri thức.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap&subset=vietnamese" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="./" aria-label="iSMART Education">
+        <img src="assets/logo-ismart.svg" alt="iSMART Education" width="190" height="48"
+             onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'logo-missing',textContent:'Thêm logo: assets/logo-ismart.svg'}))">
+      </a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <h1 class="title"><span class="accent">Đội</span> ngũ giảng viên</h1>
+      <p class="lead">Đồng hành cùng học sinh trên hành trình khám phá tri thức.</p>
+    </section>
+
+    <div class="toolbar">
+      <label class="search">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="search" type="search" placeholder="Tìm giảng viên..." autocomplete="off" aria-label="Tìm giảng viên">
+      </label>
+      <div class="filters" id="filters" role="tablist" aria-label="Lọc giảng viên"></div>
+    </div>
+
+    <section class="slider" aria-label="Danh sách giảng viên">
+      <ul class="track" id="track"></ul>
+      <p class="empty" id="empty" hidden>Không tìm thấy giảng viên phù hợp.</p>
+    </section>
+
+    <div class="pager">
+      <p class="count"><strong id="page-current">01</strong> <span>/ <span id="page-total">01</span></span></p>
+      <div class="arrows">
+        <button class="arrow" id="prev" type="button" aria-label="Trang trước">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 5-7 7 7 7"/></svg>
+        </button>
+        <button class="arrow" id="next" type="button" aria-label="Trang sau">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg>
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <dialog class="viewer" id="viewer" aria-label="Hồ sơ giảng viên">
+    <div class="viewer-frame">
+      <img class="viewer-card" id="viewer-img" alt="">
+      <button class="viewer-close" type="button" data-close aria-label="Đóng">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7l10 10M17 7 7 17"/></svg>
+      </button>
+    </div>
+    <div class="viewer-actions">
+      <button class="btn btn-ghost" type="button" id="viewer-copy">Sao chép link</button>
+    </div>
+  </dialog>
+
+  <script src="data/teachers.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+# Bản nén trùng với thư mục iSMART_Teacher_Cards/
+*.zip
+__pycache__/
+.claude/settings.local.json
